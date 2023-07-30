@@ -1,0 +1,12 @@
+.main{
+  background-color: #D7EEDF;
+}
+.input{
+  margin-left: 34rem;
+  /* align-self: center; */
+}
+.hero{
+  padding-top: 5rem;
+  display: grid;
+  gap: 2rem;
+}
