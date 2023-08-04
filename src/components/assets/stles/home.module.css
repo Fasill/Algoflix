@@ -1,12 +1,62 @@
-.main{
-  background-color: #D7EEDF;
-}
+/* .main{
+
+} */
 .input{
   margin-left: 34rem;
+  margin-top: -5rem;
   /* align-self: center; */
 }
 .hero{
   padding-top: 5rem;
   display: grid;
-  gap: 2rem;
+  /* gap: 2rem; */
+  background-color: #D7EEDF;
+  height:25rem;
+}
+@media (max-width:878px) {
+  .input{
+    margin-left: 10rem;
+
+  }
+}
+@media (max-width:489px) {
+  .input{
+    margin-left: 5rem;
+
+  }
+}
+@media (max-width:390px) {
+  .input{
+    margin-left: -3rem;
+    /* align-self: center; */
+    scale:0.5;
+  }
+  
+}
+/* The main container to hold both algos and algobackgroundContainer */
+.container {
+  position: relative;
+}
+
+/* Styling for algos */
+.algos {
+  /* Your styles for algos container here */
+}
+
+/* Styling for algobackgroundContainer */
+.algobackgroundContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Push the background container to the back */
+}
+
+/* Styling for algobackground image */
+.algobackground {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Adjust this to your image needs */
+
 }

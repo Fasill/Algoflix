@@ -1,0 +1,30 @@
+.holeGraph{
+  /* background-color: coral; */
+  height: 15rem;
+  /* position: relative; */
+  margin-top: 10rem;
+  display: flex;
+  padding-left: 15rem;
+  padding-right: 6rem;
+  display: flex;
+  /* gap:-1rem; */
+
+}
+.graph{
+  position: absolute;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+
+  color: white;
+  width: 50px;
+  background-color:rgb(135, 8, 8);
+  padding-left: 3rem;
+  padding-top: 1rem;
+  padding-right: 3rem;
+
+  /* background-color: ; */
+
+}
+button{
+  background-color: red;
+}

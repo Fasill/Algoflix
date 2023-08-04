@@ -2,10 +2,13 @@ import {Navbar} from "./navBar.js"
 import style from './assets/stles/home.module.css'
 import 'bootstrap/dist/css/bootstrap.css';
 import  './assets/stles/home.css'
-
+import {Algos} from './algos.js'
+import { useEffect } from "react";
 export const Home=()=>{
   const imagePath = process.env.PUBLIC_URL ;
-
+  useEffect(()=>{
+    localStorage.setItem("val","")
+  },[])
   return (
     <div className={style.main}>
 
@@ -24,6 +27,15 @@ export const Home=()=>{
     </div>
 
       </div>
+      <div className={style.container}>
+        <div className={style.algos}>
+          <Algos />
+        </div>
+        <div className={style.algobackgroundContainer}>
+          <img className={style.algobackground} src={`${imagePath}/algoBoard.png`} />
+        </div>
+      </div>
+
     </div>
   )
 } 

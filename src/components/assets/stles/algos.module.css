@@ -1,0 +1,87 @@
+.all{ 
+  /* margin-top: 1rem; */
+  display: grid;
+  grid-gap:2rem;
+  background-color:rgba(3,2,0,0.7);
+
+ }
+
+.algo {
+
+  display: grid;
+
+  grid-template-columns: repeat(3, 2fr); /* Three columns with equal width */
+  grid-gap: 1.5rem; /* Space between cards */
+  padding-top :2rem;
+  padding-right :6rem;
+  padding-left :6rem;
+
+}
+
+.card {
+  cursor: pointer;
+  background-color: #f0f0f0;
+  padding: 20px;
+  text-align: center;
+  min-height:20rem;
+  border-radius:2rem
+}
+.titles{
+  display: grid;
+}
+.title{
+  margin-top: 1rem;
+
+  color:white;
+}
+.underline{
+
+  scale:1.5;
+  margin: 0 auto;
+}
+
+
+@media (max-width:1080px) {
+  .algo {
+
+  
+    grid-template-columns: repeat(2, 2fr); /* Three columns with equal width */
+
+  
+  }
+  
+}
+@media (max-width:980px) {
+  .algo {
+
+  
+    padding-right :3rem;
+    padding-left :3rem;
+  
+  }
+  
+}
+@media (max-width:650px) {
+  .algo {
+
+  
+    padding-right :4rem;
+    padding-left :4rem;
+    grid-template-columns: repeat(1, 2fr); /* Three columns with equal width */
+
+  
+  }
+  
+}
+@media (max-width:390px) {
+  .algo {
+
+  
+    padding-right :0.2rem;
+    padding-left :0.2rem;
+    grid-template-columns: repeat(1, 2fr); /* Three columns with equal width */
+
+  
+  }
+  
+}

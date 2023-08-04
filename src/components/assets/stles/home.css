@@ -1,7 +1,7 @@
 .btn-primary {
   background-color: red;
   border:solid red 1px ;
-
+  height: 2.3rem;
 }
 .btn-primary:hover{
   background-color: rgb(48, 126, 235);
