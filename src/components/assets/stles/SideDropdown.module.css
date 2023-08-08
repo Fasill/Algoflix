@@ -1,0 +1,33 @@
+.sideDropdown{
+  /* background-color: aqua; */
+  position: absolute;
+  /* height:1rem; */
+  /* z-index: -9999; */
+  /* background-color: aqua; */
+  display: grid;
+  margin-top: -9rem;
+
+}
+.arrow{
+  
+  /* margin-top: -24rem; */
+  margin-left: 2rem;
+
+  /* height:1; */
+  /* scale:0.5; */
+}
+.lists ul{
+  display: grid;
+  grid-gap:1rem;
+
+}
+.lists ul li,.lists ul a{
+  text-decoration: none;
+  list-style: none;
+
+}
+.lists ul {
+  backdrop-filter: blur(5px); 
+  /* align-items: center; */
+  background-color: rgb(3,3,3,0.5);
+}

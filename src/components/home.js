@@ -13,7 +13,6 @@ export const Home=()=>{
     <div className={style.main}>
 
       <div>
-        <Navbar/>
       </div>
       <div className={style.hero}>
         <h1>Visualize, Analyze, and Succeed</h1>

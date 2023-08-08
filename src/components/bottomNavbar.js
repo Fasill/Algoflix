@@ -1,8 +1,12 @@
 import style from './assets/stles/ButtomNavbar.module.css'
 import React, { useState,useEffect } from 'react';
 import {motion} from 'framer-motion';
+// import { useHistory } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
+
 
 export const ButtomNavbar = ()=>{
+  const navigate = useNavigate();
   const imagePath = process.env.PUBLIC_URL ;
   const [val,setVal] = useState("")
   const [showMenu, setShowMenu] = useState(false);
@@ -26,8 +30,12 @@ export const ButtomNavbar = ()=>{
   };
 
   const handleSubmit = (event) => {
+
     event.preventDefault();
     localStorage.setItem('numberInputs', JSON.stringify(numberInputs));
+    // navigate('.', { replace: true });
+    window.location.reload()
+
   };
   // =======================
 

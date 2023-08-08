@@ -1,31 +1,40 @@
-.holeGraph{
-  /* background-color: coral; */
-  height: 15rem;
-  position: relative;
-  margin-top: 5rem;
-  display: flex;
-  padding-left: 20rem;
-  padding-right: 6rem;
-  display: flex;
-  /* gap:-1rem; */
+.show{
+  z-index: -9999;
 
 
 }
+.hero{
+  padding-bottom: 23rem;
+  position: relative;
+  
+}
+.holeGraph{
+  /* adding-bottom: 10rem;
+  height: 14rem;
+  display: flex; */
+  padding-left: 20rem;
+  /* padding-right: 6rem;
+  padding-bottom: 1rem;
+  background-color: #0099ff;
+  width: 10rem;
+  */
+
+}
 .graph{
+  /* padding-bottom: 60rem; */
+
   position: absolute;
   border-radius: 1rem;
   color: white;
-  width: 50px;
   background-color: rgb(135, 8, 8);
   /* padding-left: 3rem; */
   width:5rem;
   /* padding-top: 1rem; */
   /* padding-right: 3rem; */
-  bottom: 0; /* Change from top to bottom positioning */
+   bottom: 0; 
   transform-origin: bottom;
   font-size:2rem;
   box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5); /* Add shadow */
-
 
 
 }
@@ -75,9 +84,9 @@
 .backgroundimg{
   padding-top: 5rem;
   display: grid;
-
+  overflow: hidden;
   /* margin-top:2rem; */
-  height: 34rem;
+  height: 50rem;
   width: 100%;
   /* align-self:left; */
   position:absolute;
@@ -104,13 +113,17 @@
 .buttomNav{
   display: flex;
   /* align-items: center; */
-  /* gap: 1rem; */
+  gap: 1rem;
 }
 .slider{
   position: absolute;
-margin-top: 6rem;
-margin-left: 8rem;
+margin-top: 9rem;
+margin-left: 14rem;
   width: 15rem;
   /* height:1rem; */
   /* background-color: #0099ff; */
+}
+.dropup{
+margin-top: 6rem;
+
 }

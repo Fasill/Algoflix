@@ -10,13 +10,14 @@
 
 .hole {
   /* position: fixed; */
+  position: absolute;
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: #333;
   color:#ff4e4e;
-  
-  
+  z-index: 9999;
+  width: 100%;
   padding: 10px;
 }
 

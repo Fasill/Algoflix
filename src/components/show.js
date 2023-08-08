@@ -3,10 +3,12 @@ import { motion } from 'framer-motion';
 import { Navbar } from './navBar';
 import style from './assets/stles/show.module.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
-
+import { useNavigate } from 'react-router-dom';
 import {ButtomNavbar} from './bottomNavbar'
+import {SideDropdown} from './sideDropdown'
 
 export const Show = () => {
+  const navigate = useNavigate()
   const imagePath = process.env.PUBLIC_URL ;
   const [clicked ,setClicked] = useState(false)
   const [sliderValue, setSliderValue] = useState(3);
@@ -33,6 +35,7 @@ export const Show = () => {
   },[])
   
   const bubbleSort = async () => {
+
     setClicked(true)
     const len = arr.length;
     let swapped;
@@ -41,6 +44,8 @@ export const Show = () => {
       swapped = false;
 
       for (let i = 0; i < len - 1; i++) {
+        arr[i] = Number(arr[i])
+        arr[i+1] = Number(arr[i+1])
         if (arr[i] > arr[i + 1]) {
           // Swap elements
           const temp = arr[i];
@@ -70,8 +75,10 @@ export const Show = () => {
   };
 
   return (
-    <div>
-    <Navbar/>
+    <div className={style.show}>
+    <div className={style. hero}>
+    <SideDropdown/>
+
     <div className={style.backgroundimg}>
       {imgarr.map((index) => (
         <motion.img
@@ -106,6 +113,7 @@ export const Show = () => {
       ))}
 
     </div>
+    </div>
     <div 
     className = {style.buttom}
     >
@@ -118,19 +126,7 @@ export const Show = () => {
       <div 
       className = {style.buttomNav}
       >
-        <div class="btn-group dropup">
-  <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    Dropup
-  </button>
-  <div style = {{marginLeft:"10rem"}}
-  class="dropdown-menu">
-  <a class="dropdown-item" href="#">Link 1</a>
-    <a class="dropdown-item" href="#">Link 2</a>
-    <a class="dropdown-item" href="#">Link 3</a>
-    <div class="dropdown-divider"></div>
-    <button class="dropdown-item" type="button">Button 1</button>
-    <button class="dropdown-item" type="button">Button 2</button>  </div>
-</div>
+       
       <input
       className={style.slider}
         type="range"
@@ -144,6 +140,7 @@ export const Show = () => {
 
       </div>
     </div>
+    
   );
 };
 
