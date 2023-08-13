@@ -7,7 +7,7 @@ export const SideDropdown= ()=>{
     const arrow1 =`${imagePath}/arrow.svg` 
     const arrow2 =`${imagePath}/arrow2.svg` 
 
-    const [drop,setDrop] = useState(true)
+    const [drop,setDrop] = useState(false)
     const DropdownClicked = ()=>{
       console.log('Image clicked!');
 

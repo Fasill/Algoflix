@@ -98,6 +98,8 @@
   z-index:-1;
   /* width:; */
   background-color:pink;
+  filter: blur(5px) brightness(75%);
+  
   grid-template-columns: repeat(8, 2fr); /* Three columns with equal width */
   grid-gap:-15rem;
 

@@ -11,7 +11,6 @@ import {ButtomNavbar} from './bottomNavbar'
 import {SideDropdown} from './sideDropdown'
 
 export const Show = () => {
-  const imagePath = process.env.PUBLIC_URL ;
   const [typeOfalgo,setTypeOfalgo]= useState("")
 
 

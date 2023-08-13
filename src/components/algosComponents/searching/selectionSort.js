@@ -20,16 +20,16 @@ export const Selection = () => {
 
   // =================
   const valueMappings = {
-    1: 2000,
-    2: 1550,
-    3: 1100,
-    4: 650,
-    5: 200,
+    1: 3000,
+    2: 2500,
+    3: 2000,
+    4: 1550,
+    5: 1100,
   };
   const [arr, setArr] = useState([]);
   
   useEffect(()=>{
-    const defaultArr = ["",8, 5, 3, 1, 9, 6, 0, 7, 4, 2];
+    const defaultArr =["",3.8, 2.9, 0.5, 1.4, 0.8, 4.4, -0.1, 1.7, 2.6, 4.1, 3.2, 2.0, -1.0, 4.7, 0.2, -0.7, 2.3, 1.1, -0.4, 3.5];
 
   // Get the object from local storage and convert it to an array or use the default array if not available
   
@@ -41,36 +41,36 @@ export const Selection = () => {
   },[])
   const temp = 3
   
-  const bubbleSort = async () => {
-
-    setClicked(true)
+  const selectionSort = async () => {
+    setClicked(true);
     const len = arr.length;
-    let swapped;
-
-    do {
-      swapped = false;
-
-      for (let i = 0; i < len - 1; i++) {
-        arr[i] = Number(arr[i])
-        arr[i+1] = Number(arr[i+1])
-        if (arr[i] > arr[i + 1]) {
-          // Swap elements
-          const temp = arr[i];
-          arr[i] = arr[i + 1];
-          arr[i + 1] = temp;
-
-          // Indicate that a swap occurred
-          swapped = true;
-
-          // Update state to re-render the array with the new order
-          setArr([...arr]);
-
-          // Add a 2-second delay between each move
-          await new Promise((resolve) => setTimeout(resolve, valueMappings[sliderValue]));
+  
+    for (let i = 0; i < len - 1; i++) {
+      let minIndex = i;
+  
+      for (let j = i + 1; j < len; j++) {
+        arr[i] = Number(arr[i]);
+        arr[j] = Number(arr[j]);
+        if (arr[j] < arr[minIndex]) {
+          minIndex = j;
         }
       }
-    } while (swapped);
+  
+      if (minIndex !== i) {
+        // Swap elements
+        const temp = arr[i];
+        arr[i] = arr[minIndex];
+        arr[minIndex] = temp;
+  
+        // Update state to re-render the array with the new order
+        setArr([...arr]);
+  
+        // Add a delay between each move
+        await new Promise((resolve) => setTimeout(resolve, valueMappings[sliderValue]));
+      }
+    }
   };
+  
   const imgarr =  Array.from({ length: 15 }, (_, index) => index + 1);
 
   const getRandomDirection = () => {
@@ -86,6 +86,10 @@ export const Selection = () => {
 
 
     <div className={style.show}>
+      <img
+        className={style.shelfImg}
+      src = {`${imagePath}/shelf.jpg`}
+      />
       
     <div className={style. hero}>
 
@@ -100,11 +104,13 @@ export const Selection = () => {
           style={{
             height: `${50+card * 15}px`,
           }}
-          animate={{ x: `${index * 90}px` }}
+          animate={{ x: `${index * 33}px` }}
           transition={{ duration: 0.5 }}
           className={style.graph}
         >
+          <div className = {style.book}>{" "}</div>
           <p>{card}</p> 
+         
         </motion.div>
 
       ))}
@@ -119,7 +125,7 @@ export const Selection = () => {
     >
     <input
         className={style.bttn}
-        onClick={!clicked?bubbleSort:null}
+        onClick={!clicked?selectionSort:null}
         type = "submit"
         value  = "Sort"
       />
