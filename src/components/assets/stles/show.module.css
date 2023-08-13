@@ -8,19 +8,23 @@
   position: relative;
   
 }
+
 .holeGraph{
-  /* adding-bottom: 10rem;
-  height: 14rem;
-  display: flex; */
+
   padding-left: 20rem;
-  /* padding-right: 6rem;
-  padding-bottom: 1rem;
-  background-color: #0099ff;
-  width: 10rem;
-  */
 
 }
+@media (max-width:1115px) {
+
+  .holeGraph{
+
+    padding-left: 1rem;
+
+  
+  }
+}
 .graph{
+  /* margin: 0 auto; */
   /* padding-bottom: 60rem; */
 
   position: absolute;
@@ -123,7 +127,15 @@ margin-left: 14rem;
   /* height:1rem; */
   /* background-color: #0099ff; */
 }
-.dropup{
-margin-top: 6rem;
 
+@media (max-width:1115px) {
+  .slider{
+margin-left: 1rem;
+  }
+}
+@media (max-width:1000px) {
+  .slider{
+    width: 5rem;
+
+  }
 }

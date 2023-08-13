@@ -17,20 +17,20 @@ export const SideDropdown= ()=>{
     <div>
     <motion.div
 
-    initial={{ y: -5 }}
+    initial={{ y: 20 }}
     animate={{
-      y: drop?250:10,
+      y: drop?100:-300,
       transition: { duration: 1 }, // Move down in 1 second
     }}
     transition={{ yoyo: Infinity }} // Yoyo loop for moving up and down continuously
      className={style.sideDropdown}>
       <div className = {style.lists}>
       <ul>
-          <li><a href="/Bubble">Bubble Sort</a></li>
-          <li><a href="/Insertion">Insertion Sort</a></li>
-          <li><a href="/Selection">Selection Sort</a></li>
-          <li><a href="/Merge">Merge Sort</a></li>
-          <li><a href="/Quick">Quick Sort</a></li>
+          <li><a className={style.bubble} href="bubble">Bubble Sort</a></li>
+          <li><a className={style.insertion} href="/Insertion">Insertion Sort</a></li>
+          <li><a  className={style.selection} href="/Selection">Selection Sort</a></li>
+          <li><a className={style.merge} href="/Merge">Merge Sort</a></li>
+          <li><a className={style.quick} href="/Quick">Quick Sort</a></li>
 
         </ul>
       </div>

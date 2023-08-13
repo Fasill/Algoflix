@@ -7,11 +7,12 @@ import { Navbar } from './components/navBar';
 function App() {
   return (
     <div className="App">
-      <Router>
         <Navbar/>
+      <Router>
+
         <Routes>
           <Route path="/"  element={<Home/>} />
-          <Route path = "/search" element = {<Show/>} />
+          <Route path = "/sort/bubble" element = {<Show/>} />
         </Routes>
       </Router>        
     </div>

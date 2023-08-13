@@ -5,7 +5,7 @@ export const Algos = ()=>{
   const navigate = useNavigate()
   const imagePath = process.env.PUBLIC_URL ;
   const clicked = (val) =>{ 
-    navigate(`/${val}`)
+    navigate(`/${val}/bubble`)
     localStorage.setItem("val",val)
     console.log("clicked")
   }
@@ -17,7 +17,7 @@ export const Algos = ()=>{
       </div>
   <div className={style.algo}>
     
-    <div className = {style.card} onClick={()=>{clicked("search")}}>
+    <div className = {style.card} onClick={()=>{clicked("sort")}}>
       <h1>searching</h1>
     </div>  
        

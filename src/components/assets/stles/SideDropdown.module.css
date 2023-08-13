@@ -9,6 +9,7 @@
 
 }
 .arrow{
+  cursor: pointer;
   
   /* margin-top: -24rem; */
   margin-left: 2rem;
@@ -22,12 +23,36 @@
 
 }
 .lists ul li,.lists ul a{
-  text-decoration: none;
-  list-style: none;
 
+  all: initial;
 }
 .lists ul {
+  padding-top: 8rem;
+  padding-left: 3rem;
+  padding-bottom: 1rem;
+
+
+  border-top-right-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+
+  /* padding-right: 3rem; */
+  width: 13rem;
+  height: 30rem;
   backdrop-filter: blur(5px); 
   /* align-items: center; */
-  background-color: rgb(3,3,3,0.5);
+  background-color: #333;
+  align-items: center;
+}
+.lists ul a{
+  padding: 1rem;
+  color: white;
+  background-color: #545454;
+  border-radius: 0.2rem;
+  cursor: pointer
+}
+.bubble{
+  width: 5rem;
+}
+.lists ul a:hover{
+  background-color:  #717171;
 }
