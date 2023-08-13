@@ -7,14 +7,19 @@ export const SideDropdown= ()=>{
     const arrow1 =`${imagePath}/arrow.svg` 
     const arrow2 =`${imagePath}/arrow2.svg` 
 
-    const [drop,setDrop] = useState(false)
+    const [drop,setDrop] = useState(true)
     const DropdownClicked = ()=>{
       console.log('Image clicked!');
 
       setDrop(!drop)
     }
+    // const clicked=(algo)=>{
+    //   console.log(algo)
+    //   localStorage.setItem("algo",algo)
+
+    // }
   return (
-    <div>
+    <div className = {style.allsideDropdown}>
     <motion.div
 
     initial={{ y: 20 }}
@@ -26,7 +31,9 @@ export const SideDropdown= ()=>{
      className={style.sideDropdown}>
       <div className = {style.lists}>
       <ul>
-          <li><a className={style.bubble} href="bubble">Bubble Sort</a></li>
+          <li><a 
+          //  onClick={()=>clicked("bubble")}
+          className={style.bubble} href="bubble">Bubble Sort</a></li>
           <li><a className={style.insertion} href="/Insertion">Insertion Sort</a></li>
           <li><a  className={style.selection} href="/Selection">Selection Sort</a></li>
           <li><a className={style.merge} href="/Merge">Merge Sort</a></li>

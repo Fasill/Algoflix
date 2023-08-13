@@ -1,0 +1,29 @@
+.hero{
+  position: relative;
+  align-items: center;
+
+  height:auto;
+
+}
+.holeGraph{
+  margin-top: 21rem;
+  margin-left: 20rem;
+}
+.graph{
+
+
+position: absolute;
+  border-radius: 1rem;
+  color: white;
+  background-color: rgb(20, 38, 51);
+
+  width:5rem;
+
+
+   bottom: 0; 
+  transform-origin: bottom;
+  font-size:2rem;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5); /* Add shadow */
+
+
+}

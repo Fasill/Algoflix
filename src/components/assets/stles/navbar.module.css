@@ -2,7 +2,13 @@
 
 
 
+.allNavbar{
+  position: fixed;
+  width: 100%;
+  z-index: 9999;
 
+
+}
 
 
 
@@ -16,7 +22,6 @@
   align-items: center;
   background-color: #333;
   color:#ff4e4e;
-  z-index: 9999;
   width: 100%;
   padding: 10px;
 }

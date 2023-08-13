@@ -1,10 +1,16 @@
+.allsideDropdown{
+  position: fixed;
+  z-index: 999;
+
+}
+
 .sideDropdown{
   /* background-color: aqua; */
   position: absolute;
   /* height:1rem; */
-  /* z-index: -9999; */
   /* background-color: aqua; */
   display: grid;
+  grid-gap:3rem;
   margin-top: -9rem;
 
 }

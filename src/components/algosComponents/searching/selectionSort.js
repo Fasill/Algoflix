@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
-import style from '../../assets/stles/show.module.css'
+import style from '../../assets/stles/slection.module.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {ButtomNavbar} from '../../bottomNavbar'
 import {SideDropdown} from '../../sideDropdown'
 
-export const Bubble = () => {
+export const Selection = () => {
   const imagePath = process.env.PUBLIC_URL ;
   const [clicked ,setClicked] = useState(false)
   const [sliderValue, setSliderValue] = useState(3);
@@ -39,6 +39,7 @@ export const Bubble = () => {
   localArr.shift()
   setArr(localArr)
   },[])
+  const temp = 3
   
   const bubbleSort = async () => {
 
@@ -83,26 +84,10 @@ export const Bubble = () => {
   return (
     <div>
 
-<div className={style.backgroundimg}>
-      {imgarr.map((index) => (
-        <motion.img
-          key={index}
-          className={`${style.img} ${style[`img${index}`]}`}
-          src={`${imagePath}/bubble3.png`}
-          whileHover={{ scale: 1.2 }}
-          animate={{
-            x: getRandomDirection() === 'left' ? -100 : getRandomDirection() === 'right' ? 100 : 0,
-            y: getRandomDirection() === 'top' ? -100 : getRandomDirection() === 'bottom' ? 100 : 0,
-            transition: { duration: Math.random() * 4 + 1, repeat: Infinity, repeatType: 'reverse' },
-          }}
-        />
-      ))}
-    </div>
 
     <div className={style.show}>
       
     <div className={style. hero}>
-    <SideDropdown/>
 
     
     <div 
@@ -121,7 +106,11 @@ export const Bubble = () => {
         >
           <p>{card}</p> 
         </motion.div>
+
       ))}
+         
+        {/* <div className={style.graph} >{temp}</div> */}
+
 
     </div>
     </div>

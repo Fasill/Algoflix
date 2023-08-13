@@ -17,6 +17,8 @@ export const Navbar = ()=>{
   
 
   return (
+    <div
+    className = {style.allNavbar}>
     <div className={style.hole}>
       <div className={style.left}>
         
@@ -60,6 +62,7 @@ export const Navbar = ()=>{
         </div>
         </div>
       </div>
+    </div>
     </div>
   );
 }

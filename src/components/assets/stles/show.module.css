@@ -1,11 +1,12 @@
 .show{
   z-index: -9999;
 
-
 }
 .hero{
   padding-bottom: 23rem;
   position: relative;
+  height: 10rem;
+
   
 }
 
@@ -90,7 +91,7 @@
   display: grid;
   overflow: hidden;
   /* margin-top:2rem; */
-  height: 50rem;
+  height: 40rem;
   width: 100%;
   /* align-self:left; */
   position:absolute;
