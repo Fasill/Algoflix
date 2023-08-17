@@ -10,6 +10,7 @@
 
 .hole {
   /* position: fixed; */
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -18,6 +19,7 @@
   color:#ff4e4e;
   margin-top:7.3rem;
   height:4rem;
+
 }
 
 .form{

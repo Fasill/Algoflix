@@ -80,3 +80,6 @@
   /* Add a slight scale transform on hover */
   transform: scale(1.05);
 }
+.buttomNav{
+  margin-top:-4rem;
+}

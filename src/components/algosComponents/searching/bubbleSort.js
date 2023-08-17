@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { motion } from 'framer-motion';
 import style from '../../assets/stles/show.module.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -70,6 +70,7 @@ export const Bubble = () => {
       }
     } while (swapped);
   };
+  const ref = useRef()
   const imgarr =  Array.from({ length: 15 }, (_, index) => index + 1);
 
   const getRandomDirection = () => {
@@ -85,6 +86,7 @@ export const Bubble = () => {
 
 <div className={style.backgroundimg}>
       {imgarr.map((index) => (
+
         <motion.img
           key={index}
           className={`${style.img} ${style[`img${index}`]}`}
@@ -96,6 +98,7 @@ export const Bubble = () => {
             transition: { duration: Math.random() * 4 + 1, repeat: Infinity, repeatType: 'reverse' },
           }}
         />
+        
       ))}
     </div>
 
@@ -121,6 +124,7 @@ export const Bubble = () => {
         >
           <p>{card}</p> 
         </motion.div>
+        
       ))}
 
     </div>
@@ -134,6 +138,7 @@ export const Bubble = () => {
         type = "submit"
         value  = "Sort"
       />
+
       <div 
       className = {style.buttomNav}
       >

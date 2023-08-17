@@ -1,48 +1,34 @@
-import React, { useEffect, useState } from 'react';
 
-import { motion } from 'framer-motion';
 import {Bubble} from './algosComponents/searching/bubbleSort.js'
 import {Selection} from './algosComponents/searching/selectionSort.js'
 
 import style from './assets/stles/show.module.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { useNavigate } from 'react-router-dom';
-import {ButtomNavbar} from './bottomNavbar'
-import {SideDropdown} from './sideDropdown'
+import { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 
-export const Show = () => {
-  const [typeOfalgo,setTypeOfalgo]= useState("")
-
-
-
+export const Show = ({ scrollTo }) => {
+  const location = useLocation();
 
   useEffect(() => {
-    const storedAlgo = localStorage.getItem("algo");
-    setTypeOfalgo(storedAlgo);
-    console.log("Stored algo:", storedAlgo);
-  }, []);
-  useEffect(() => {
-    const urlParts = window.location.pathname.split('/');
-    const algoTypeFromUrl = urlParts[urlParts.length - 1];
-
-    if (['bubble', 'selection'].includes(algoTypeFromUrl)) {
-      setTypeOfalgo(algoTypeFromUrl);
-      localStorage.setItem('algo', algoTypeFromUrl);
+    if (scrollTo) {
+      const targetElement = document.getElementById(scrollTo);
+      if (targetElement) {
+        targetElement.scrollIntoView({ behavior: 'smooth' });
+      }
     }
-  }, []);
+  }, [location.pathname, scrollTo]);
 
-  
   return (
     <div className={style.show}>
-
-    <div className={style. hero}>
-
-          <Bubble/>
-          <Selection/>
+      <div className={style.hero}>
+        <div id="bubble">
+          <Bubble />
+        </div>
+        <div id="selection">
+          <Selection />
+        </div>
       </div>
     </div>
-
-    
   );
 };
-
